@@ -400,6 +400,8 @@ a:hover {
   gap: var(--spacing-large);
 }
 
+/* Project details */
+
 .project-details {
   position: absolute;
   height: 100%;
@@ -429,4 +431,17 @@ a:hover {
 
 .project-details-content {
   padding: var(--spacing-xxlarge);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.project-details-example-img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.project-details-section {
+  display: flex;
+  gap: var(--spacing-medium);
 }
