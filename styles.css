@@ -196,6 +196,7 @@ table {
   --text-link-color: #806ded;
   --text-link-color-hover: #6149e9;
   --text-link-color-secondary: #5181e1;
+  --text-link-color-secondary-hover: #8c40ff;
   --text-color: #acacd0;
   --text-header-color: #acacd0;
 
@@ -211,6 +212,11 @@ table {
   --spacing-large: 2rem;
   --spacing-xlarge: 2.5rem;
   --spacing-xxlarge: 3rem;
+
+  --antimatter-brand-color: #932eb8;
+  --antimatter-bg-color: #16171d;
+
+  --hover-transition: 1.25s;
 }
 body {
   background-color: var(--bg-color);
@@ -262,8 +268,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
-  color: var(--text-color);
+  color: var(--text-callout-color);
 }
 
 .header-image {
@@ -299,6 +304,10 @@ a:hover {
   padding: var(--spacing-small);
 }
 
+.button:hover {
+  border-color: #8c40ff;
+}
+
 .button-secondary {
   display: flex;
   align-items: center;
@@ -306,7 +315,13 @@ a:hover {
   color: var(--text-link-color-secondary);
 }
 
-.button-secondary::before {
+.button-secondary:hover,
+.is-hovered .button-secondary {
+  color: var(--text-link-color-secondary-hover);
+  transition: all var(--hover-transition) ease;
+}
+
+/* .button-secondary::before {
   content: "";
   display: inline-block;
   width: var(--text-size-regular);
@@ -315,17 +330,22 @@ a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+} */
+
+.button-secondary-container {
+  display: inline-flex;
+  gap: var(--spacing-xsmall);
+  transition: all var(--hover-transition) ease;
+  align-items: center;
 }
 
-.button-secondary:hover::before {
-  content: "";
-  display: inline-block;
-  width: var(--text-size-regular);
-  height: var(--text-size-regular);
-  background-image: url('data:image/svg+xml;utf8,%3Csvg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="%23acacd0"%3E%3Cpath d="M8 21H20.4C20.7314 21 21 20.7314 21 20.4V3.6C21 3.26863 20.7314 3 20.4 3H3.6C3.26863 3 3 3.26863 3 3.6V16" stroke="%23acacd0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3Cpath d="M3.5 20.5L12 12M12 12V16M12 12H8" stroke="%23acacd0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3C/svg%3E');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.button-secondary-icon path {
+  stroke: var(--text-link-color-secondary);
+}
+
+.is-hovered .button-secondary-icon path {
+  transition: all var(--hover-transition) ease;
+  stroke: var(--text-link-color-secondary-hover);
 }
 
 .header {
@@ -355,17 +375,17 @@ a:hover {
   gap: var(--spacing-medium);
 }
 
-.work-item-highlighted {
+.work-item-primary {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.work-item-highlighted-header {
+.work-item-primary-header {
   padding-bottom: var(--spacing-small);
 }
 
-.work-item-main {
+.work-item-primary-details {
   display: flex;
   gap: var(--spacing-medium);
 }
@@ -373,6 +393,23 @@ a:hover {
 .work-item-logo {
   width: 2.75rem;
   height: 2.75rem;
+}
+
+.work-item-logo path {
+  fill: var(--text-link-color-secondary);
+}
+
+.is-hovered .work-item-logo path {
+  fill: var(--text-callout-color);
+  transition: fill var(--hover-transition) ease;
+}
+.antimatter-logo path {
+  fill: var(--text-link-color-secondary);
+}
+
+.is-hovered .antimatter-logo path {
+  fill: var(--antimatter-brand-color);
+  transition: fill var(--hover-transition) ease;
 }
 
 .work-item-logo-container {
@@ -384,7 +421,13 @@ a:hover {
   justify-content: center;
   width: 75px;
   height: 75px;
+  cursor: pointer;
   /* aspect-ratio: 1/1; */
+}
+
+.is-hovered .antimatter-logo-container {
+  background-color: var(--antimatter-bg-color);
+  transition: background-color var(--hover-transition) ease;
 }
 
 .intro-text {
