@@ -407,6 +407,8 @@ a:hover {
   height: 100%;
   width: 100%;
   background: var(--bg-color);
+  display: flex;
+  justify-content: center;
 }
 
 .close-x {
@@ -423,6 +425,9 @@ a:hover {
 
 .project-details-inner {
   padding: var(--spacing-large);
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .project-details-inner::after {
@@ -438,10 +443,30 @@ a:hover {
 
 .project-details-example-img {
   width: 100%;
-  max-width: 500px;
+  max-width: 1000px;
 }
 
 .project-details-section {
+  display: flex;
+  gap: var(--spacing-medium);
+  flex-direction: column;
+}
+
+.project-details-section-content {
+  display: flex;
+  gap: var(--spacing-medium);
+  flex-direction: column;
+}
+
+.project-details-section-text-column {
+  flex: 1;
+}
+
+.project-details-section-image-column {
+  flex: 2;
+}
+
+.project-details-example-img-container {
   display: flex;
   gap: var(--spacing-medium);
 }
