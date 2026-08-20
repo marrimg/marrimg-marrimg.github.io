@@ -190,11 +190,12 @@ table {
 
 /* Variables */
 :root {
-  --bg-color: #0e1123;
-  --section-bg-color: #12162d;
-  --text-callout-color: #932eb8;
-  --text-link-color: #b65cd6;
-  --secondary-logo-color: #621f7a;
+  --bg-color: #0b1d41;
+  --section-bg-color: #0b2352;
+  --text-callout-color: #8c40ff;
+  --text-link-color: #806ded;
+  --text-link-color-hover: #6149e9;
+  --text-link-color-secondary: #5181e1;
   --text-color: #acacd0;
   --text-header-color: #acacd0;
 
@@ -302,6 +303,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: var(--spacing-xsmall);
+  color: var(--text-link-color-secondary);
 }
 
 .button-secondary::before {
@@ -309,7 +311,7 @@ a:hover {
   display: inline-block;
   width: var(--text-size-regular);
   height: var(--text-size-regular);
-  background-image: url('data:image/svg+xml;utf8,%3Csvg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="%23b65cd6"%3E%3Cpath d="M8 21H20.4C20.7314 21 21 20.7314 21 20.4V3.6C21 3.26863 20.7314 3 20.4 3H3.6C3.26863 3 3 3.26863 3 3.6V16" stroke="%23b65cd6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3Cpath d="M3.5 20.5L12 12M12 12V16M12 12H8" stroke="%23b65cd6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;utf8,%3Csvg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="%235181e1"%3E%3Cpath d="M8 21H20.4C20.7314 21 21 20.7314 21 20.4V3.6C21 3.26863 20.7314 3 20.4 3H3.6C3.26863 3 3 3.26863 3 3.6V16" stroke="%235181e1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3Cpath d="M3.5 20.5L12 12M12 12V16M12 12H8" stroke="%235181e1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3C/svg%3E');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
