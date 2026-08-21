@@ -2,7 +2,9 @@
   "name": "marrimg-marrimg-github-io",
   "compatibility_date": "2026-08-21",
   "pages_build_output_dir": "./",
-  
+  "assets": {
+    "directory": "./"
+  },
   // Define your R2 Bucket bindings here
   "r2_buckets": [
     {
