@@ -5,7 +5,7 @@
   "assets": {
     "directory": "./"
   },
-    "r2_buckets": [
+  "r2_buckets": [
     {
       "binding": "images_bucket",          // The variable name you will use in your code
       "bucket_name": "images" // The actual name of your bucket in Cloudflare
