@@ -1,7 +1,7 @@
 {
   "name": "marrimg-marrimg-github-io",
   "compatibility_date": "2026-08-21",
-  "main": "./src/index.js",
+  "main": "./index.js",
   "assets": {
     "directory": "./"
   },
