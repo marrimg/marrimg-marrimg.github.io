@@ -1,0 +1,13 @@
+{
+  "name": "marrimg-marrimg-github-io",
+  "compatibility_date": "2026-08-21",
+  "pages_build_output_dir": "./",
+  
+  // Define your R2 Bucket bindings here
+  "r2_buckets": [
+    {
+      "binding": "images_bucket",          // The variable name you will use in your code
+      "bucket_name": "images" // The actual name of your bucket in Cloudflare
+    }
+  ]
+}
